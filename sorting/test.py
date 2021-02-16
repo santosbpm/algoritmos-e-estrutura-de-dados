@@ -24,7 +24,7 @@ if __name__ == "__main__":
                 }
     print("*******************************")
     for name, arr in test_cases.items():
-        print(f"\nCaso de teste: {name}"
+        print(f"\nCaso de teste: {name}")
         print(arr)
         insertion_sort(arr)
         print("\n Ordenado:")

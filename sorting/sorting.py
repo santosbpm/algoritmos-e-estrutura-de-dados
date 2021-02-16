@@ -11,3 +11,35 @@ def insertion_sort(arr):
             i = i - 1
             
         arr[i+1] = key
+
+# Ordenação por mistura
+def mergesort(arr, p=0, r=None):
+    
+    if r is None:
+        r = len(arr)
+        
+    if(r - p > 1):
+        q = (p + r)//2
+        mergesort(arr, p, q)
+        mergesort(arr, q, r)
+        merge(arr, p, q, r)
+
+def merge(arr, p, q, r):
+    # Novos arranjos
+    left = arr[p:q]
+    right = arr[q:r]
+    top_left, top_right = 0, 0
+    
+    for k in range(p, r):
+        if top_left >= len(left):
+            arr[k] = right[top_right]
+            top_right = top_right + 1
+        elif top_right >= len(right):
+            arr[k] = left[top_left]
+            top_left = top_left + 1
+        elif left[top_left] < right[top_right]:
+            arr[k] = left[top_left]
+            top_left = top_left + 1
+        else:
+            arr[k] = right[top_right]
+            top_right = top_right + 1

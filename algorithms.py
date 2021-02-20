@@ -13,7 +13,7 @@ def insertion_sort(arr):
         arr[i+1] = key
 
 # Ordenação por mistura
-def mergesort(arr, p=0, r=None):
+def merge_sort(arr, p=0, r=None):
     
     if r is None:
         r = len(arr)
@@ -44,14 +44,14 @@ def merge(arr, p, q, r):
             arr[k] = right[top_right]
             top_right = top_right + 1
             
-            
+# Inverter listas
 def reverse_list(arr):
     size = len(arr)
     limit = size//2
     for i in range(limit):
         aux = arr[i]
-        arr[i] = arr[size-i]
-        arr[size-i] = aux
+        arr[i] = arr[size-i-1]
+        arr[size-i-1] = aux
 
 # 4 + N complexidade de tamanho
 # 2 + 4*(N/2) == 2 + 2*N complexidade de tempo

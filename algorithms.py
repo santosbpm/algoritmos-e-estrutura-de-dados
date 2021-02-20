@@ -43,3 +43,15 @@ def merge(arr, p, q, r):
         else:
             arr[k] = right[top_right]
             top_right = top_right + 1
+            
+            
+def reverse_list(arr):
+    size = len(arr)
+    limit = size//2
+    for i in range(limit):
+        aux = arr[i]
+        arr[i] = arr[size-i]
+        arr[size-i] = aux
+
+# 4 + N complexidade de tamanho
+# 2 + 4*(N/2) == 2 + 2*N complexidade de tempo

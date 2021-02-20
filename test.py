@@ -3,7 +3,7 @@
     GitHub do código: https://github.com/python-cafe/algorithms.git
 '''
 import random
-from sorting import insertion_sort
+from sorting import insertion_sort, merge_sort
 
 
 any_numbers = random.sample(range(1, 1000), 42)
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     for name, arr in test_cases.items():
         print(f"\nCaso de teste: {name}")
         print(arr)
-        insertion_sort(arr)
+        merge_sort(arr)
         print("\n Ordenado:")
         print(arr)
     print("*******************************")

@@ -71,3 +71,14 @@ def duplicate_elements(arr):
     (N ^ 2 - N) / 2 + 1 =
     O(N^2)
 '''
+
+
+# Busca Linear em Lista de Alocação Sequencial
+
+def search(arr, elem):
+    ''' Retorna o indice do elemento se ele estiver na lista,
+        ou None, caso não esteja '''
+    for i in range(len(arr)):
+        if arr[i] == elem:
+            return i
+    return None

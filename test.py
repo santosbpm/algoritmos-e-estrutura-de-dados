@@ -3,7 +3,7 @@
     GitHub do código: https://github.com/python-cafe/algorithms.git
 '''
 import random
-from sorting import insertion_sort, merge_sort
+from algorithms import insertion_sort, merge_sort, reverse_list, duplicate_elements, search
 
 
 any_numbers = random.sample(range(1, 1000), 42)
@@ -16,8 +16,11 @@ inversed = [117, 90, 88, 83, 81, 77, 74, 69, 64, 63, 51,
 
 repeated = [7, 7, 7, 7, 7, 1, 1, 9, 9, 0, 4, 4, 4, 5, 4, 5, 7, 1,]
 
+strange_list = [8, "5", 32, 0, "python", 11]
+
 if __name__ == "__main__":
-    test_cases = {'Números aleatórios': any_numbers, 
+    # Teste para ordenção de lista
+    """ test_cases = {'Números aleatórios': any_numbers, 
                     'Já ordenados': already_sorted, 
                     'Ordem inversa': inversed, 
                     'Elementos repetidos': repeated
@@ -26,7 +29,16 @@ if __name__ == "__main__":
     for name, arr in test_cases.items():
         print(f"\nCaso de teste: {name}")
         print(arr)
-        merge_sort(arr)
+        reverse_list(arr)
         print("\n Ordenado:")
         print(arr)
-    print("*******************************")
+    print("*******************************") """
+    
+    
+    # Teste de Busca
+    elem = 32
+    index = search(strange_list, elem)
+    if index is not None:
+        print(f"O índice do elemento {elem} é {index}")
+    else:
+        print(f"O elemento {elem} não se encontra na lista.")

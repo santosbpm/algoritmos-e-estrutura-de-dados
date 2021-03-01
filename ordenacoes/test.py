@@ -1,9 +1,5 @@
-''' 
-    Código de teste retirado do canal Programação Dinâmico (Python Café)
-    GitHub do código: https://github.com/python-cafe/algorithms.git
-'''
 import random
-from ordenacao import insertion_sort, merge_sort, reverse_list, duplicate_elements
+from ordenacao import insertion_sort, merge_sort, reverse_list
 
 
 any_numbers = random.sample(range(1, 1000), 42)

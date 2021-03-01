@@ -1,4 +1,5 @@
-# Procura por elementos duplicados
+''' Procura por elementos duplicados '''
+
 def duplicate_elements(arr):
     for i in range(len(arr)-1):
         for j in  range(i+1, len(arr)-1):
@@ -14,11 +15,11 @@ def duplicate_elements(arr):
 '''
 
 
-# Busca Linear em Lista de Alocação Sequencial
+''' Busca Linear em Lista de Alocação Sequencial '''
 
 def search(arr, elem):
-    ''' Retorna o indice do elemento se ele estiver na lista,
-        ou None, caso não esteja '''
+    #Retorna o indice do elemento se ele 
+    #estiver na lista, ou None, caso não esteja
     for i in range(len(arr)):
         if arr[i] == elem:
             return i

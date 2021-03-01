@@ -1,4 +1,4 @@
-from node import Node
+from listas.node import Node
 
 class LinkedList:
     
@@ -56,7 +56,7 @@ class LinkedList:
         else:
             raise IndexError("list index out of range")
         
-    ''' Retorna o índidce do elemento na lista '''
+    ''' Retorna o índice do elemento na lista '''
     def index(self, elem):
         pointer = self.head
         i = 0

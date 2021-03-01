@@ -1,4 +1,4 @@
-from busca import search
+from busca import search, duplicate_elements
 
 if __name__ == "__main__":
     # Teste de Busca

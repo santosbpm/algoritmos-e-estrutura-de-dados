@@ -1,10 +1,11 @@
-from listas import Node
+from linkedlist import LinkedList
 
-# teste do nó
+# teste do lista encadeada
 if __name__ == "__main__":
-    no1 = Node(5)
-    no2 = Node(9)
-    print(no1.data)
-    print(no2.data)
-    no1.next = no2
-    print(no1.next)
+    lista = LinkedList()
+    lista.append(7)
+    lista.append(80)
+    lista.append(56)
+    print(len(lista))
+    print(lista[2])
+    print(lista.index(80))

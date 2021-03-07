@@ -13,3 +13,6 @@ if __name__ == "__main__":
     print(lista.index(7))
     lista.insert(0, 22)
     print(lista[0])
+    print(lista[1])
+    lista.remove(80)
+    print(lista[1])

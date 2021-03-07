@@ -1,4 +1,4 @@
-from listas.node import Node
+from node import Node
 
 class LinkedList:
     
@@ -26,8 +26,8 @@ class LinkedList:
     def __len__(self):
         return self._size
     
-    ''' Acessar determinado elemento da lista pelo índice '''
-    def __getitem__(self, index):
+    ''' Retorna o nó que se encontra no index indicada '''
+    def _getnode(self, index):
         pointer = self.head
         
         for i in range(index):
@@ -35,6 +35,11 @@ class LinkedList:
                 pointer = pointer.next
             else:
                 raise IndexError("list index out of range")
+        return pointer
+    
+    ''' Acessar determinado elemento da lista pelo índice '''
+    def __getitem__(self, index):
+        pointer = self._getnode(index)
         
         if pointer:
             return pointer.data
@@ -43,13 +48,7 @@ class LinkedList:
     ''' Modifica um valor que está em um determinado 
         lugar da lista '''
     def __setitem__(self, index, elem):
-        pointer = self.head
-        
-        for i in range(index):
-            if pointer:
-                pointer = pointer.next
-            else:
-                raise IndexError("list index out of range")
+        pointer = self._getnode(index)
         
         if pointer:
             pointer.data = elem
@@ -68,3 +67,17 @@ class LinkedList:
             i += 1
         
         raise ValueError(f"{elem} is not in list")
+    
+    ''' Insere um elemento em qualquer posição '''
+    def insert(self, index, elem):
+        node = Node(elem)
+        
+        if index == 0:
+            
+            node.next = self.head
+            self.head = node
+        else:
+            pointer = self._getnode(index-1)
+            node.next = pointer.next
+            pointer.next = node
+        self._size += 1

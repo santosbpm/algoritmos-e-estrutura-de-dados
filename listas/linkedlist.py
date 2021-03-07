@@ -103,3 +103,16 @@ class LinkedList:
             self._size -= 1
             return True
         raise ValueError(f"{elem} is not in list")
+    
+    ''' Exibe uma representação da lista '''
+    def __repr__(self):
+        string = "[  "
+        pointer = self.head
+        while pointer:
+            string = string + str(pointer.data) + "  "
+            pointer = pointer.next
+        string = string + "]"
+        return string
+    
+    def __str__(self):
+        return self.__repr__()

@@ -16,3 +16,4 @@ if __name__ == "__main__":
     print(lista[1])
     lista.remove(80)
     print(lista[1])
+    print(lista)
